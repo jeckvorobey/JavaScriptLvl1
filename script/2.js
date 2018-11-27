@@ -38,96 +38,103 @@ o если а и b отрицательные, вывести их произв�
 o если а и b разных знаков, вывести их сумму;
 ноль можно считать положительным числом.*/
 
-//  var a = Math.round(Math.random()*15) - 10 , b = Math.round(Math.random()*10) - 10;
-// if(a > 0 && b > 0){
-//     x = a - b;
-//     alert(x);
-// }
-//  else if(a < 0 && b < 0){
-//      x = a * b;
-//     alert(x);
-//  }
-//  else {
-//      x = a + b;
-//     alert(x);
-//  }
+var a = Math.round(Math.random() * 15) - 10,
+    b = Math.round(Math.random() * 10) - 10;
+if (a > 0 && b > 0) {
+    x = a - b;
+    alert(x);
+} else if (a < 0 && b < 0) {
+    x = a * b;
+    alert(x);
+} else {
+    x = a + b;
+    alert(x);
+}
 
- /*4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch
+/*4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch
 организовать вывод чисел от a до 15*/
 
-// a = Math.round(Math.random()*15);
-// switch(a){
-//     case 1:
-//         alert(1);
-//     case 2:
-//         alert(2);
-//     case 3:
-//         alert(3);
-//     case 4:
-//         alert(4);
-//     case 5:
-//         alert(5); 
-//     case 6:
-//         alert(6);
-//     case 7:
-//         alert(7);
-//     case 8:
-//         alert(8);
-//     case 9:
-//         alert(9);
-//     case 10:
-//         alert(10);
-//     case 11:
-//         alert(11);
-//     case 12:
-//         alert(12);
-//     case 13:
-//         alert(13);
-//     case 14:
-//         alert(14);
-//     case 15:
-//         alert(15);   
+a = Math.round(Math.random() * 15);
+switch (a) {
+    case 1:
+        alert(1);
+    case 2:
+        alert(2);
+    case 3:
+        alert(3);
+    case 4:
+        alert(4);
+    case 5:
+        alert(5);
+    case 6:
+        alert(6);
+    case 7:
+        alert(7);
+    case 8:
+        alert(8);
+    case 9:
+        alert(9);
+    case 10:
+        alert(10);
+    case 11:
+        alert(11);
+    case 12:
+        alert(12);
+    case 13:
+        alert(13);
+    case 14:
+        alert(14);
+    case 15:
+        alert(15);
 
-// }
+}
 
 /*5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами.
 Обязательно использовать оператор return*/
 
-function multiplication (x,y){
+function multiplication(x, y) {
     var z = x * y;
     return z;
 }
-//alert(multiplication(5,3))
+alert(multiplication(5, 3))
 
-function division (x,y){
+function division(x, y) {
     var z = x / y;
     return z;
 }
-//alert(division(15,3))
+alert(division(15, 3))
 
-function sum (x , y){
+function sum(x, y) {
     var z = x + y;
     return z;
 }
-//alert(sum(2,2));
+alert(sum(2, 2));
 
- function subtraction (x,y){
+function subtraction(x, y) {
     var z = x - y;
     return z;
 }
-//alert(subtraction(18,8));
+alert(subtraction(18, 8));
 
 /*6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где
 arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от
 переданного значения операции выполнить одну из арифметических операций (использовать
 функции из пункта 5) и вернуть полученное значение (использовать switch).*/
 
-// function mathOperation(x, y, operation) {
-//     switch(operation){
-//         case "умножение"
-            
-//         case "деление"
-//         case "сложение"
-//         case "вычитание"
-//     }
-// }
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case "сложение":
+            return arg1 + arg2;
+            break;
+        case "вычитание":
+            return arg1 - arg2;
+            break;
+        case "деление":
+            return arg1 / arg2;
+            break;
+        case "умножение":
+            return arg1 * arg2;
+            break;
+    }
+}
+alert(mathOperation(6,7,"умножение"));
