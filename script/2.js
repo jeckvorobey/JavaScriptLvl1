@@ -102,7 +102,7 @@ function division(x, y) {
     var z = x / y;
     return z;
 }
-alert(division(15, 3))
+alert(division(15, 3));
 
 function sum(x, y) {
     var z = x + y;
