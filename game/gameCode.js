@@ -107,7 +107,7 @@ switch (event) {
 }
 alert('Спасибо за игру');
 
-var ans = prompt('введите номер вопроса');
+var ans = +prompt('введите номер вопроса');
 
 if (ans < 1 || ans > 4) {
     alert('вопроса под таким номером небыло')
@@ -119,24 +119,35 @@ if (ans < 1 || ans > 4) {
             } else {
                 alert(works.a00 + works.a2);
             }
+            break;
         case 2:
-            if (answer[1] == 1) {
+            if (answer[0] == 1 || answer[1] == 1) {
                 alert(works.b00 + works.b1);
-            } else {
+            }
+            else if (answer[0] == 2 ||  answer[1] == 1) {
+                alert(works.c00 + works.c1);
+            } 
+            else if (answer[0] == 2 || answer[1] == 2) {
+                alert(works.c00 + works.c2);
+            }
+            else {
                 alert(works.b00 + works.b2);
             }
+            break;
         case 3:
             if (answer[2] == 1) {
                 alert(works.c00 + works.c1);
             } else {
                 alert(works.c00 + works.c2);
             }
+            break;
         case 4:
             if (answer[3] == 1) {
                 alert(works.d00 + works.d1);
             } else {
                 alert(works.d00 + works.d2);
             }
+            break;
         default:
             {
                 alert('Ошибка');
