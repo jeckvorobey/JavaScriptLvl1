@@ -107,12 +107,12 @@ switch (event) {
 }
 alert('Спасибо за игру');
 
-var history = prompt('введите номер вопроса');
+var ans = prompt('введите номер вопроса');
 
-if (history < 1 || history > 4) {
+if (ans < 1 || ans > 4) {
     alert('вопроса под таким номером небыло')
 } else {
-    switch (history) {
+    switch (ans) {
         case 1:
             if (answer[0] == 1) {
                 alert(works.a00 + works.a1);
