@@ -135,7 +135,7 @@ if (ans < 1 || ans > 4) {
             }
             break;
         case 3:
-            if (answer[2] == 1) {
+            if (answer[1] == 1 || answer[2] == 1) {
                 alert(works.c00 + works.c1);
             } else {
                 alert(works.c00 + works.c2);
