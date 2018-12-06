@@ -1,0 +1,20 @@
+.chess {
+    height: 800px;
+    width: 800px;
+    margin: 50px auto;
+    border: 2px solid black;
+}
+
+.blockChess {
+    height: 100px;
+    width: 100px;
+    float: left;
+}
+
+.dark {
+    background-color: black;
+}
+ 
+.light {
+    background-color: white;
+}
