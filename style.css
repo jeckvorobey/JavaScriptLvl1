@@ -1,18 +1,18 @@
 html, body {
     width: 100%;
 }
-.bigImg {
+#bigImg {
     width: 640px;
     height: 480px;
     margin: 0 auto 10px;
     border: 2px solid black;
 }
 
+
 .smallImg {
     width: 100%;
     display: flex;
     justify-content: center;
-
 }
 
 .smallImg img {
