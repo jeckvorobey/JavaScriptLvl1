@@ -76,6 +76,7 @@ function startGame() {
 
     snake_timer = setInterval(move, SNAKE_SPEED); //каждые 200мс запускаем функцию move
     setTimeout(createFood, 5000);
+    setInterval(mine, 10000);
 }
 
 /**
@@ -145,6 +146,10 @@ function move() {
         }
     } else {
         finishTheGame();
+    }
+    //Проверка на мину
+    if (haveMine(new_unit)) {
+        finishTheGame()
     }
 }
 
@@ -255,7 +260,43 @@ function refreshGame() {
     location.reload();
 }
 
+//  Создаем мину
+function mine() {
+    var mine_x = Math.floor(Math.random() * FIELD_SIZE_X);
+    var mine_y = Math.floor(Math.random() * FIELD_SIZE_Y);
+    var mine_cell = document.getElementsByClassName('cell-' + mine_y + '-' + mine_x)[0];
+    var mine_cell_classes = mine_cell.getAttribute('class').split(' ');
+    // проверка на змейку
+    if (!mine_cell_classes.includes('snake-unit')) {
+        var classes = '';
+        for (var i = 0; i < mine_cell_classes.length; i++) {
+            classes += mine_cell_classes[i] + ' ';
+        }
+        console.log('class', classes + 'mine-unit');
+        mine_cell.setAttribute('class', classes + 'mine-unit');
+        // исчезновение мины
+        var classes = mine_cell.getAttribute('class').split(' ');
+        // удаляем мину
+        setTimeout(function () {
+            mine_cell.setAttribute('class', classes[0] + ' ' + classes[1])
+        }, 15000);
+    }
+}
+/**
+ * проверка на мину
+ * @param unit
+ * @returns {boolean}
+ */
+function haveMine(unit) {
+    var check = false;
 
+    var unit_classes = unit.getAttribute('class').split(' ');
+    // Если мина
+    if (unit_classes.includes('mine-unit')) {
+        check = true;
+    }
+    return check;
+}
 
 // Инициализация
 window.onload = init;
