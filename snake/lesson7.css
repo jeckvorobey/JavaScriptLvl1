@@ -28,7 +28,11 @@ td.game-table-cell{
     background-color: white;
 }
 .food-unit{
-    background-color: red;
+    background-color: green;
+}
+
+.mine-unit {
+    background-color: crimson;
 }
 .buttons{
     display: inline-block;
