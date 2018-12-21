@@ -1,20 +1,68 @@
+html, body {
+    font-size: 16px;
+}
+
+.letters {
+    width: 400px;
+    margin: 0 auto;
+    display: flex;
+    text-align: center;
+    clear: both;
+}
+
+.letter {
+    display: block;
+    width: 100%;
+}
+
+.rotate {
+    transform: rotate(180deg);
+}
+
+.columnNumbers {
+    height: 408px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.columnNumbers__left {
+    float: left;
+    margin: .5em .5em .5em 26.5em;
+}
+
+.columnNumbers__right {
+    margin: .5em 26.5em .5em .5em;
+}
+
+.number {
+    display: block;
+    font-size: 1.25em;
+}
+
 .chess {
-    height: 800px;
-    width: 800px;
-    margin: 50px auto;
+    height: 400px;
+    width: 400px;
+    margin: .5em auto;
     border: 2px solid black;
+    float: left;
 }
 
 .blockChess {
-    height: 100px;
-    width: 100px;
+    height: 50px;
+    width: 50px;
     float: left;
 }
 
 .dark {
-    background-color: black;
+    background-color:#463f3fe5;
 }
- 
+
 .light {
     background-color: white;
+}
+
+.position {
+    text-align: center;
+    font-size: 2.7em;
 }
